@@ -6,6 +6,8 @@ using UI.Common.Utils;
 using MainModule.DataModel;
 using System.Windows;
 using static MainModule.Common.Enums;
+using System;
+using System.Linq;
 
 namespace UI.Common.Converters;
 

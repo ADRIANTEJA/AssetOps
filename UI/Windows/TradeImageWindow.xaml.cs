@@ -1,5 +1,7 @@
 ﻿using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
+using Prism.Events;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;

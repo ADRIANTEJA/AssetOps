@@ -1,6 +1,7 @@
 ﻿using API.Events;
 using MainModule.DataModel;
 using Microsoft.Extensions.DependencyInjection;
+using Prism.Events;
 using System.Windows;
 using System.Windows.Controls;
 

@@ -2,6 +2,8 @@
 using MainModule.Common.Utils;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Prism.Events;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using UI.Common.Utils;

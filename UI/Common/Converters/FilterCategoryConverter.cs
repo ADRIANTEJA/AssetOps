@@ -1,6 +1,8 @@
 ﻿using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Data;
 
 namespace UI.Common.Converters;

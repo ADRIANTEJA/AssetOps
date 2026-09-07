@@ -2,6 +2,7 @@
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 using MainModule.DataModel;
+using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;

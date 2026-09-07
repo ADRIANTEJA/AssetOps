@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Windows.Markup;
 using System.Windows;
 using UI.Services;
+using System.Threading;
 
 namespace UI.Settings;
 /// <summary>

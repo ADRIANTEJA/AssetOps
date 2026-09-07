@@ -1,7 +1,10 @@
 ﻿using MainModule.DataModel;
 using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Data;
 using UI.Common.Utils;
 using static MainModule.Common.Enums;

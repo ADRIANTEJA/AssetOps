@@ -1,5 +1,6 @@
 ﻿using API.Events;
 using MainModule.ViewModels;
+using Prism.Events;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;

@@ -1,5 +1,6 @@
 ﻿using API.Events;
 using Microsoft.Extensions.DependencyInjection;
+using Prism.Events;
 using System.Windows;
 using System.Windows.Input;
 

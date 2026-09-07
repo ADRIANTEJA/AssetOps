@@ -1,6 +1,7 @@
 ﻿using LiveCharts;
 using LiveCharts.Configurations;
 using LiveCharts.Defaults;
+using System;
 using System.Windows;
 using UI.Common.Helpers;
 

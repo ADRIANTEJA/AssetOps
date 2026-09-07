@@ -2,6 +2,8 @@
 using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Prism.Events;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;

@@ -11,8 +11,8 @@ using MainModule.Services;
 using System.IO;
 using MainModule.Common;
 using API;
-using Microsoft.Extensions.Logging;
-using MainModule.Common.Utils;
+using System;
+using Prism.Events;
 
 namespace UI;
 
