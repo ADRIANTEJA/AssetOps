@@ -11,6 +11,10 @@
     <AssemblyName>Asset Ops</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);INSTALLED</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Common\Resources\Assets\Cursors\grab.cur" />
     <None Remove="Common\Resources\Assets\Cursors\grabbing.cur" />
@@ -108,6 +112,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.11" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
     <PackageReference Include="Prism.Events" Version="9.0.537" />
+    <PackageReference Include="Velopack" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>

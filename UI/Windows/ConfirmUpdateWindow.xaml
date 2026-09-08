@@ -1,13 +1,13 @@
-﻿<Window x:Class="UI.Windows.DeleteAccountWarningWindow"
+﻿<Window x:Class="UI.Windows.ConfirmUpdateWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:UI.Windows"
+        xmlns:local="clr-namespace:UI.Windows" 
+        xmlns:commonButtons="clr-namespace:UI.Controls.Buttons.Common" 
         xmlns:mainWindowButtons="clr-namespace:UI.Controls.Buttons.MainWindow"
-        xmlns:commonButtons="clr-namespace:UI.Controls.Buttons.Common"
         mc:Ignorable="d"
-        Title="Delete account" 
+        Title="Confirm Update"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
@@ -55,7 +55,7 @@
                                               Click="CloseProgramHandler"/>
             </Grid>
 
-            <TextBlock Text="{DynamicResource delete_account_window_prompt}"
+            <TextBlock x:Name="update_prompt_textblock"
                        Grid.Row="1"
                        TextWrapping="Wrap"
                        Style="{StaticResource base_textblock_style}"

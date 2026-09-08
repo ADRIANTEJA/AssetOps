@@ -44,4 +44,6 @@
     アプリケーションが再起動され、設定がリセットされます</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">ファイルエラー</system:String>
+    <system:String x:Key="main_window_update_available_button">新しいバージョンが利用可能です</system:String>
+    <system:String x:Key="delete_account_window_prompt">このアカウントを削除すると、すべてのパフォーマンス追跡データと登録された取引が失われます。よろしいですか？</system:String>
 </ResourceDictionary>

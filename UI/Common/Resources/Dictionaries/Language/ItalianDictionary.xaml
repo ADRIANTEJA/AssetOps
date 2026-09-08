@@ -44,4 +44,6 @@
     non è presente o è danneggiato, l'applicazione e le impostazioni verranno ripristinate</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">errore del file</system:String>
-</ResourceDictionary>
+    <system:String x:Key="main_window_update_available_button">Aggiornamento disponibile</system:String>
+    <system:String x:Key="delete_account_window_prompt">Eliminando questo account, tutti i dati di monitoraggio delle performance e le operazioni registrate andranno persi, sei sicuro?</system:String>
+    </ResourceDictionary>

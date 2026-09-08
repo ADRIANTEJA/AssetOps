@@ -43,4 +43,6 @@
     l'application redémarrera et les paramètres seront réinitialisés</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">Erreur de fichier</system:String>
+    <system:String x:Key="main_window_update_available_button">Nouvelle version disponible</system:String>
+    <system:String x:Key="delete_account_window_prompt">En supprimant ce compte, toutes les données de suivi de performance et les opérations enregistrées seront perdues, êtes-vous sûr?</system:String>
 </ResourceDictionary>

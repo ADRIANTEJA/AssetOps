@@ -41,4 +41,6 @@
     não estiver lá ou estiver corrompido, o aplicativo e as configurações serão redefinidos</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">Erro de arquivo</system:String>
+    <system:String x:Key="main_window_update_available_button">Nova versão disponível</system:String>
+    <system:String x:Key="delete_account_window_prompt">Ao excluir esta conta, todos os dados de acompanhamento de desempenho e operações registradas serão perdidos. Você tem certeza?</system:String>
 </ResourceDictionary>

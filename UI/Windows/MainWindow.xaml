@@ -62,7 +62,7 @@
         </Storyboard>
         <Storyboard x:Key="show_theme_options_storyboard">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="theme_options" Storyboard.TargetProperty="(FrameworkElement.Margin)">
-                <EasingThicknessKeyFrame KeyTime="00:00:00.3000000" Value="5,43,5,749">
+                <EasingThicknessKeyFrame KeyTime="00:00:00.3000000" Value="5,43,5,712">
                     <EasingThicknessKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
@@ -71,7 +71,7 @@
         </Storyboard>
         <Storyboard x:Key="hide_theme_options_storyboard">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="theme_options" Storyboard.TargetProperty="(FrameworkElement.Margin)">
-                <EasingThicknessKeyFrame KeyTime="00:00:00.3000000" Value="5,5,5,787">
+                <EasingThicknessKeyFrame KeyTime="00:00:00.3000000" Value="5,5,5,750">
                     <EasingThicknessKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseIn"/>
                     </EasingThicknessKeyFrame.EasingFunction>
@@ -236,6 +236,7 @@
                             <RowDefinition Height="37"/>
                             <RowDefinition Height="37"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="37"/>
                         </Grid.RowDefinitions>
 
                         <TextBlock x:Name="settings_menu_header"
@@ -281,7 +282,13 @@
                                                              Click="ShowThemeOptionsHandler" 
                                                              Margin="3,5,3,0" 
                                                              Height="32" />
-
+                        
+                        <mainWindowButtons:UpdateAvailableButton x:Name="update_available_button"
+                                                                Grid.Row="8"
+                                                                Grid.ColumnSpan="2"
+                                                                Visibility="Hidden"
+                                                                Click="UpdateAvailableButtonClickHandler"
+                                                                Margin="7,5,3,0"/>
                     </Grid>
                 </Border>
             </Grid>

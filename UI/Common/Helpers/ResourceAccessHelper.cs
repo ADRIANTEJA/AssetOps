@@ -81,5 +81,13 @@ public static class ResourceAccessHelper
 
     private static readonly string missingSymbolErrorKey = "add_trade_window_missing_symbol_error";
 
+    private static readonly string updatePromptPart1Key = "update_window_prompt_part1";
+
+    public static string UpdatePromptPart1Key => updatePromptPart1Key;
+
+    private static readonly string updatePromptPart2Key = "update_window_prompt_part2";
+
+    public static string UpdatePromptPart2Key => updatePromptPart2Key;
+
     public static string MissingSymbolErrorKey => missingSymbolErrorKey;
 }

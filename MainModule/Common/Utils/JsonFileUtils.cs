@@ -9,7 +9,8 @@ public class JsonFileUtils
     private static readonly JsonSerializerSettings jsonSettings = new()
     {
         NullValueHandling = NullValueHandling.Ignore,
-        Converters = { new StringEnumConverter() },    
+        Converters = { new StringEnumConverter() },  
+        Formatting = Formatting.Indented
     };
     /// <summary>
     /// serializes an object into a json file, if the files does not exists

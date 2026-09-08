@@ -944,6 +944,38 @@
         </Setter>
     </Style>
 
+    <Style x:Key="update_button_style"
+           TargetType="{x:Type Button}" 
+           BasedOn="{StaticResource base_buttons_style}">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Opacity="{TemplateBinding Opacity}"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="0">
+                        <TextBlock x:Name="highlightable_text"
+                                   Text="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+                                   Style="{StaticResource base_textblock_style}"
+                                   Foreground="{StaticResource warning_yellow_brush}"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   FontSize="{Binding Path=FontSize, RelativeSource={RelativeSource TemplatedParent}}">
+                        </TextBlock>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="highlightable_text"
+                                    Property="Foreground"
+                                    Value="{DynamicResource warning_yellow_highlight_brush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
         <Setter Property="Margin" Value="0,0,3,0"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>

@@ -13,6 +13,7 @@ using MainModule.Common;
 using API;
 using System;
 using Prism.Events;
+using Velopack;
 
 namespace UI;
 
@@ -23,6 +24,7 @@ public partial class App : Application
                                                                    Constants.ApplicationDataFolderName);
     public App()
     {
+        VelopackApp.Build().Run();
         ConfigureServices();
     }
 

@@ -1,0 +1,15 @@
+﻿<Button x:Class="UI.Controls.Buttons.MainWindow.UpdateAvailableButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:UI.Controls.Buttons.MainWindow"
+        mc:Ignorable="d"
+        Background="{DynamicResource theme_background_brush}"
+        Content="{DynamicResource main_window_update_available_button}"
+        Style="{DynamicResource update_button_style}"
+        Foreground="{DynamicResource warning_yellow_brush}"
+        d:DesignHeight="450" 
+        d:DesignWidth="800">
+    
+</Button>

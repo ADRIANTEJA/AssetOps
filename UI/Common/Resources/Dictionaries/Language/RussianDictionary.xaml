@@ -44,4 +44,6 @@
     приложение перезагрузится и настройки будут сброшены</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">Ошибка файла</system:String>
+    <system:String x:Key="main_window_update_available_button">Новая версия доступна</system:String>
+    <system:String x:Key="delete_account_window_prompt">Удаляя этот аккаунт, вы потеряете все данные отслеживания производительности и зарегистрированные операции. Вы уверены?</system:String>
 </ResourceDictionary>

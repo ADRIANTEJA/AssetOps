@@ -44,4 +44,9 @@
     application will restart and settings will be reset</system:String>
     <!--same as above-->
     <system:String x:Key="ui_settings_file_error_header">File error</system:String>
+    <system:String x:Key="main_window_update_available_button">New version available</system:String>
+    <system:String x:Key="delete_account_window_prompt">By deleting this account all performance tracking data and registered operations will be lost, are you sure?</system:String>
+    <!--update prompt is divided in two parts, in order to fit version number in between-->
+    <system:String x:Key="update_window_prompt_part1">Version</system:String>
+    <system:String x:Key="update_window_prompt_part2">is now available to download, do you want to update now?</system:String>
 </ResourceDictionary>

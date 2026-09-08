@@ -3,6 +3,7 @@ using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Prism.Events;
 using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -11,6 +12,8 @@ using UI.Common.Helpers;
 using UI.Common.Utils;
 using UI.Events;
 using UI.Services;
+using Velopack;
+using Velopack.Sources;
 
 namespace UI.Windows;
 
@@ -27,7 +30,7 @@ public partial class MainWindow : Window
         _uiConfigService = uiConfigService;
     }
 
-    private void OnWindowLoadedHandler(object sender, RoutedEventArgs e)
+    private async void OnWindowLoadedHandler(object sender, RoutedEventArgs e)
     {
         //this calls the method for loading UI settings, if the settings file is missing or bad written
         //it is deleted and recreated thus reseting the application's UI settings and restarting the app
@@ -42,9 +45,22 @@ public partial class MainWindow : Window
         //fires an event to load the culture settings related to language
         //at startup
         _eventAggregator.GetEvent<UILanguageChangedEvent>().Publish();
+
+        #if INSTALLED
+        update_available_button.Visibility = await IsAnUpdateAvailableAsync() ? Visibility.Visible : Visibility.Hidden;
+        #endif
     }
 
-    public void ApplyUIPreferencesOnStartup()
+    private async Task<bool> IsAnUpdateAvailableAsync()
+    {
+        var updateManager = new UpdateManager(new GithubSource("https://github.com/ADRIANTEJA/Trading-Journal", null, false));
+
+        var newVersion = await updateManager.CheckForUpdatesAsync();
+
+        return newVersion is not null;
+    }
+
+    private void ApplyUIPreferencesOnStartup()
     {
         _uiConfigService.ApplySettings(new());
 
@@ -193,6 +209,12 @@ public partial class MainWindow : Window
         {
 
         }
+    }
+
+    private async void UpdateAvailableButtonClickHandler(object sender, RoutedEventArgs e)
+    {
+        var confirmUpdateWindow = new ConfirmUpdateWindow();
+        confirmUpdateWindow.ShowDialog();
     }
 
     private void ExportDataButtonClickHandler(object sender, RoutedEventArgs e) =>
