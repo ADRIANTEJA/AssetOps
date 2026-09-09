@@ -8,18 +8,18 @@ A small-medium size application I made to act as a trading journal software allw
 ---
 
 ## Screenshots
-![Application Screenshot](docs/images/Screenshot(21).png)
-![Application Screenshot](docs/images/Screenshot(22).png)
-![Application Screenshot](docs/images/Screenshot(23).png)
-![Application Screenshot](docs/images/Screenshot(24).png)
-![Application Screenshot](docs/images/Screenshot(25).png)
-![Application Screenshot](docs/images/Screenshot(26).png)
-![Application Screenshot](docs/images/Screenshot(27).png)
-![Application Screenshot](docs/images/Screenshot(28).png)
-![Application Screenshot](docs/images/Screenshot(29).png)
-![Application Screenshot](docs/images/Screenshot(30).png)
-![Application Screenshot](docs/images/Screenshot(31).png)
-![Application Screenshot](docs/images/Screenshot(32).png)
+![Application Screenshot](docs/images/Screenshot-21.png)
+![Application Screenshot](docs/images/Screenshot-22.png)
+![Application Screenshot](docs/images/Screenshot-23.png)
+![Application Screenshot](docs/images/Screenshot-24.png)
+![Application Screenshot](docs/images/Screenshot-25.png)
+![Application Screenshot](docs/images/Screenshot-26.png)
+![Application Screenshot](docs/images/Screenshot-27.png)
+![Application Screenshot](docs/images/Screenshot-28.png)
+![Application Screenshot](docs/images/Screenshot-29.png)
+![Application Screenshot](docs/images/Screenshot-30.png)
+![Application Screenshot](docs/images/Screenshot-31.png)
+![Application Screenshot](docs/images/Screenshot-32.png)
 ---
 
 ## Features
