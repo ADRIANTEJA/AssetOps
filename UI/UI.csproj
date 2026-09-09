@@ -17,8 +17,7 @@
   </PropertyGroup>
 
 	<Target Name="GenerateThirdPartyNotices" BeforeTargets="BeforeBuild">
-		<Exec Command="dotnet-project-licenses -i $(MSBuildProjectDirectory)/.. -o -f $(MSBuildProjectDirectory)/../THIRD-PARTY-NOTICES.txt"
-			  IgnoreExitCode="true" />
+		<Exec Command="dotnet-project-licenses -i $(MSBuildProjectDirectory)/.. -o -f $(MSBuildProjectDirectory)/../THIRD-PARTY-NOTICES.txt" IgnoreExitCode="true" />
 	</Target>
 
   <ItemGroup>
@@ -84,7 +83,7 @@
   <ItemGroup>
     <Content Include="Common\Resources\Assets\Icons\app_taskbar_icon.ico" />
     <Content Include="DataBase.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
