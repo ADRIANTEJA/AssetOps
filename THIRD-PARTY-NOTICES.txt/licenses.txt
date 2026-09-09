@@ -1,0 +1,202 @@
+####################################################################################################
+Package:CommunityToolkit.Mvvm
+Version:8.4.2
+project URL:https://github.com/CommunityToolkit/dotnet
+Description:This package includes a .NET MVVM library with helpers such as:
+      - ObservableObject: a base class for objects implementing the INotifyPropertyChanged interface.
+      - ObservableRecipient: a base class for observable objects with support for the IMessenger service.
+      - ObservableValidator: a base class for objects implementing the INotifyDataErrorInfo interface.
+      - RelayCommand: a simple delegate command implementing the ICommand interface.
+      - AsyncRelayCommand: a delegate command supporting asynchronous operations and cancellation.
+      - WeakReferenceMessenger: a messaging system to exchange messages through different loosely-coupled objects.
+      - StrongReferenceMessenger: a high-performance messaging system that trades weak references for speed.
+      - Ioc: a helper class to configure dependency injection service containers.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:coverlet.collector
+Version:10.0.1
+project URL:https://github.com/coverlet-coverage/coverlet
+Description:Coverlet is a cross platform code coverage library for .NET, with support for line, branch and method coverage.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Dapper
+Version:2.1.79
+project URL:https://github.com/DapperLib/Dapper
+Description:A high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc. Major Sponsor: Dapper Plus from ZZZ Projects.
+licenseUrl:https://licenses.nuget.org/Apache-2.0
+license Type:Apache-2.0
+
+####################################################################################################
+Package:Dapper
+Version:2.1.79
+project URL:https://github.com/DapperLib/Dapper
+Description:A high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc. Major Sponsor: Dapper Plus from ZZZ Projects.
+licenseUrl:https://licenses.nuget.org/Apache-2.0
+license Type:Apache-2.0
+
+####################################################################################################
+Package:LiveCharts.Core
+Version:0.9.8
+project URL:
+Description:Simple, flexible, interactive and powerful data visualization for .Net. This fork is based on https://github.com/Live-Charts/Live-Charts.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:LiveCharts.Core
+Version:0.9.8
+project URL:
+Description:Simple, flexible, interactive and powerful data visualization for .Net. This fork is based on https://github.com/Live-Charts/Live-Charts.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:LiveCharts.Wpf.Core
+Version:0.9.8
+project URL:
+Description:Simple, flexible, interactive and powerful data visualization for Wpf. This fork is based on https://github.com/Live-Charts/Live-Charts.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:LiveCharts.Wpf.Core
+Version:0.9.8
+project URL:
+Description:Simple, flexible, interactive and powerful data visualization for Wpf. This fork is based on https://github.com/Live-Charts/Live-Charts.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.Configuration
+Version:10.0.11
+project URL:https://dot.net/
+Description:Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.Configuration
+Version:10.0.11
+project URL:https://dot.net/
+Description:Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.DependencyInjection
+Version:10.0.11
+project URL:https://dot.net/
+Description:Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.DependencyInjection
+Version:10.0.11
+project URL:https://dot.net/
+Description:Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.Hosting
+Version:10.0.11
+project URL:https://dot.net/
+Description:Hosting and startup infrastructures for applications.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.Extensions.Hosting
+Version:10.0.11
+project URL:https://dot.net/
+Description:Hosting and startup infrastructures for applications.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Microsoft.NET.Test.Sdk
+Version:18.9.0
+project URL:https://github.com/microsoft/vstest
+Description:The MSbuild targets and properties for building .NET test projects.
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Newtonsoft.Json
+Version:13.0.4
+project URL:https://www.newtonsoft.com/json
+Description:Json.NET is a popular high-performance JSON framework for .NET
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:Prism.Events
+Version:9.0.537
+project URL:https://github.com/PrismLibrary/Prism
+Description:Prism.Events is a library that facilitates communication between loosely coupled components in an application. It provides an event aggregator service that allows publishers and subscribers to interact through events without direct references. With multicast publish/subscribe functionality, multiple publishers can raise the same event, and multiple subscribers can listen to it, enabling flexible and efficient communication.
+licenseUrl:https://www.nuget.org/packages/Prism.Events/9.0.537/License
+license Type:LICENSE
+
+####################################################################################################
+Package:Prism.Events
+Version:9.0.537
+project URL:https://github.com/PrismLibrary/Prism
+Description:Prism.Events is a library that facilitates communication between loosely coupled components in an application. It provides an event aggregator service that allows publishers and subscribers to interact through events without direct references. With multicast publish/subscribe functionality, multiple publishers can raise the same event, and multiple subscribers can listen to it, enabling flexible and efficient communication.
+licenseUrl:https://www.nuget.org/packages/Prism.Events/9.0.537/License
+license Type:LICENSE
+
+####################################################################################################
+Package:Prism.Events
+Version:9.0.537
+project URL:https://github.com/PrismLibrary/Prism
+Description:Prism.Events is a library that facilitates communication between loosely coupled components in an application. It provides an event aggregator service that allows publishers and subscribers to interact through events without direct references. With multicast publish/subscribe functionality, multiple publishers can raise the same event, and multiple subscribers can listen to it, enabling flexible and efficient communication.
+licenseUrl:https://www.nuget.org/packages/Prism.Events/9.0.537/License
+license Type:LICENSE
+
+####################################################################################################
+Package:System.Data.SQLite.Core
+Version:1.0.119.0
+project URL:https://system.data.sqlite.org/
+Description:The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.
+licenseUrl:https://www.sqlite.org/copyright.html
+license Type:
+
+####################################################################################################
+Package:System.Data.SQLite.Core
+Version:1.0.119.0
+project URL:https://system.data.sqlite.org/
+Description:The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.
+licenseUrl:https://www.sqlite.org/copyright.html
+license Type:
+
+####################################################################################################
+Package:Velopack
+Version:1.2.0
+project URL:https://github.com/velopack/velopack
+Description:Installer and automatic update framework for cross-platform desktop applications
+licenseUrl:https://licenses.nuget.org/MIT
+license Type:MIT
+
+####################################################################################################
+Package:xunit.runner.visualstudio
+Version:4.0.0
+project URL:
+Description:Visual Studio 2022+ Test Explorer runner for the xUnit.net framework. Capable of running xUnit.net v1, v2, and v3 tests. Supports .NET 4.7.2 or later, and .NET 8 or later.
+licenseUrl:https://licenses.nuget.org/Apache-2.0
+license Type:Apache-2.0
+
+####################################################################################################
+Package:xunit.v3
+Version:4.0.0
+project URL:
+Description:xUnit.net is a developer testing framework, built to support Test Driven Development, with a design goal of extreme simplicity and alignment with framework features. Supports .NET Framework 4.7.2 or later, and .NET 8 or later.
+
+Installing this package installs xunit.v3.mtp-v2.
+licenseUrl:https://licenses.nuget.org/Apache-2.0
+license Type:Apache-2.0
+

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using UI.Common.Utils;
 using Velopack;
 using Velopack.Sources;
 
@@ -11,9 +12,19 @@ namespace UI.Windows;
 /// </summary>
 public partial class ConfirmUpdateWindow : Window
 {
-    public ConfirmUpdateWindow()
+    private readonly UpdateInfo? _newVersion;
+
+    public ConfirmUpdateWindow(UpdateInfo? newVersion)
     {
+        _newVersion = newVersion;
+
         InitializeComponent();
+    }
+
+    private void OnLoadedHandler(object sender, RoutedEventArgs e)
+    { 
+        update_prompt_textblock.Text = (string)Application.Current.FindResource("update_window_prompt_part1") + 
+                                        " " + _newVersion + " " + (string)Application.Current.FindResource("update_window_prompt_part2");
     }
 
     private void DragMoveHandler(object sender, MouseButtonEventArgs e)
@@ -39,9 +50,9 @@ public partial class ConfirmUpdateWindow : Window
 
             updateManager.ApplyUpdatesAndRestart(newVersion);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            MessageBox.Show("An error occurred while checking for updates.");
+            ErrorHandlers.HandleUpdateCheckError(ex.Message);
         } 
     }
 

@@ -22,6 +22,7 @@ public partial class App : Application
     public static IHost? AppHost { get; private set; }
     private static readonly string appDirectoryPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
                                                                    Constants.ApplicationDataFolderName);
+
     public App()
     {
         VelopackApp.Build().Run();

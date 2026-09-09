@@ -46,4 +46,5 @@
     <system:String x:Key="ui_settings_file_error_header">Dateifehler</system:String>
     <system:String x:Key="main_window_update_available_button">Neue Version verfügbar</system:String>
     <system:String x:Key="delete_account_window_prompt">Durch das Löschen dieses Kontos werden alle Leistungsdaten und registrierten Operationen verloren gehen, sind Sie sicher?</system:String>
+    <system:String x:Key="update_check_error_message">Beim Überprüfen auf Updates ist ein Fehler aufgetreten.</system:String>
 </ResourceDictionary>

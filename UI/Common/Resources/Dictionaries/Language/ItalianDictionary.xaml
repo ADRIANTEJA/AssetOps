@@ -46,4 +46,5 @@
     <system:String x:Key="ui_settings_file_error_header">errore del file</system:String>
     <system:String x:Key="main_window_update_available_button">Aggiornamento disponibile</system:String>
     <system:String x:Key="delete_account_window_prompt">Eliminando questo account, tutti i dati di monitoraggio delle performance e le operazioni registrate andranno persi, sei sicuro?</system:String>
+    <system:String x:Key="update_check_error_message">Si è verificato un errore durante il controllo degli aggiornamenti.</system:String>
     </ResourceDictionary>

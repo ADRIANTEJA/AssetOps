@@ -8,14 +8,21 @@
     <UseWPF>true</UseWPF>
     <StartupObject>UI.App</StartupObject>
     <ApplicationIcon>Common\Resources\Assets\Icons\app_taskbar_icon.ico</ApplicationIcon>
-    <AssemblyName>Asset Ops</AssemblyName>
+    <AssemblyName>AssetOps</AssemblyName>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);INSTALLED</DefineConstants>
   </PropertyGroup>
 
+	<Target Name="GenerateThirdPartyNotices" BeforeTargets="BeforeBuild">
+		<Exec Command="dotnet-project-licenses -i $(MSBuildProjectDirectory)/.. -o -f $(MSBuildProjectDirectory)/../THIRD-PARTY-NOTICES.txt"
+			  IgnoreExitCode="true" />
+	</Target>
+
   <ItemGroup>
+    <None Remove="App.config" />
     <None Remove="Common\Resources\Assets\Cursors\grab.cur" />
     <None Remove="Common\Resources\Assets\Cursors\grabbing.cur" />
     <None Remove="Common\Resources\Assets\Icons\app_logo_icon.png" />
@@ -123,7 +130,9 @@
   <ItemGroup>
     <Resource Include="Common\Resources\Assets\Cursors\grab.cur" />
     <Resource Include="Common\Resources\Assets\Cursors\grabbing.cur" />
-    <Resource Include="Common\Resources\Assets\Icons\app_logo_icon.png" />
+    <Resource Include="Common\Resources\Assets\Icons\app_logo_icon.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Common\Resources\Assets\Icons\chinese_icon.png" />
     <Resource Include="Common\Resources\Assets\Icons\dark_calculator_icon.png" />
     <Resource Include="Common\Resources\Assets\Icons\dark_home_button_icon.png" />

@@ -23,4 +23,12 @@ public static class ErrorHandlers
                         MessageBoxButton.OK,
                         MessageBoxImage.Error);
     }
+
+    public static void HandleUpdateCheckError(string exceptionMessage)
+    {
+        MessageBox.Show((string)Application.Current.FindResource("update_check_error_message") + "Exception: " + exceptionMessage,
+                        null,
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+    }
 }

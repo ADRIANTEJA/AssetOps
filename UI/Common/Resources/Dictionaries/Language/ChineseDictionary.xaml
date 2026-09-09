@@ -46,4 +46,5 @@
     <system:String x:Key="ui_settings_file_error_header">文件错误</system:String>
     <system:String x:Key="main_window_update_available_button">有新版本可用</system:String>
     <system:String x:Key="delete_account_window_prompt">删除此账户将导致所有性能跟踪数据和已注册操作丢失，您确定吗？</system:String>
+    <system:String x:Key="update_check_error_message">检查更新时发生错误.</system:String>
 </ResourceDictionary>

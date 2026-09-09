@@ -47,17 +47,25 @@ public partial class MainWindow : Window
         _eventAggregator.GetEvent<UILanguageChangedEvent>().Publish();
 
         #if INSTALLED
-        update_available_button.Visibility = await IsAnUpdateAvailableAsync() ? Visibility.Visible : Visibility.Hidden;
+        update_available_button.Visibility = await GetAvailableUpdate() is not null ? Visibility.Visible : Visibility.Hidden;
         #endif
     }
 
-    private async Task<bool> IsAnUpdateAvailableAsync()
+    private async Task<UpdateInfo?> GetAvailableUpdate()
     {
         var updateManager = new UpdateManager(new GithubSource("https://github.com/ADRIANTEJA/Trading-Journal", null, false));
 
-        var newVersion = await updateManager.CheckForUpdatesAsync();
+        try
+        {
+            var newVersion = await updateManager.CheckForUpdatesAsync();
 
-        return newVersion is not null;
+            return newVersion;
+        }
+        catch (Exception ex)
+        {
+            ErrorHandlers.HandleUpdateCheckError(ex.Message);
+            return null;
+        }
     }
 
     private void ApplyUIPreferencesOnStartup()
@@ -213,7 +221,7 @@ public partial class MainWindow : Window
 
     private async void UpdateAvailableButtonClickHandler(object sender, RoutedEventArgs e)
     {
-        var confirmUpdateWindow = new ConfirmUpdateWindow();
+        var confirmUpdateWindow = new ConfirmUpdateWindow(await GetAvailableUpdate());
         confirmUpdateWindow.ShowDialog();
     }
 

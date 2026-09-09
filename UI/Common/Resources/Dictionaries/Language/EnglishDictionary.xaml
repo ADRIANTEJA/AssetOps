@@ -49,4 +49,5 @@
     <!--update prompt is divided in two parts, in order to fit version number in between-->
     <system:String x:Key="update_window_prompt_part1">Version</system:String>
     <system:String x:Key="update_window_prompt_part2">is now available to download, do you want to update now?</system:String>
+    <system:String x:Key="update_check_error_message">An error occurred while checking for updates.</system:String>
 </ResourceDictionary>
