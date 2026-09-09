@@ -8,7 +8,18 @@ A small-medium size application I made to act as a trading journal software allw
 ---
 
 ## Screenshots
-
+![Application Screenshot](docs/images/Screenshot(21).png)
+![Application Screenshot](docs/images/Screenshot(22).png)
+![Application Screenshot](docs/images/Screenshot(23).png)
+![Application Screenshot](docs/images/Screenshot(24).png)
+![Application Screenshot](docs/images/Screenshot(25).png)
+![Application Screenshot](docs/images/Screenshot(26).png)
+![Application Screenshot](docs/images/Screenshot(27).png)
+![Application Screenshot](docs/images/Screenshot(28).png)
+![Application Screenshot](docs/images/Screenshot(29).png)
+![Application Screenshot](docs/images/Screenshot(30).png)
+![Application Screenshot](docs/images/Screenshot(31).png)
+![Application Screenshot](docs/images/Screenshot(32).png)
 ---
 
 ## Features
@@ -17,7 +28,7 @@ A small-medium size application I made to act as a trading journal software allw
 
 * **Trading Portfolio:** Allows to create a trading portfolio including any type of asset pair (with their correponding type, e.g Forex, crypto etc) that would be    later used to register trading operations.
 
-* **Risk Management Plans:** Allows to create customized risk management plans by setting name, intermediary (the platform you would use to operate, e.g BingX) max risk your willing to assume on a daily basis or per operation, daily goal and a risk-reward ration, also you can later add any relevant notes you deeme needed.
+* **Risk Management Plans:** Allows to create customized risk management plans by setting name, intermediary (the platform you would use to operate, e.g BingX) max risk your willing to assume on a daily basis or per operation, daily goal and a risk-reward ration, also you can later add any relevant notes you deeme needed. Warnings displayed on operations (trades) that violate risk management plan directives such as daily goal and maximun daily loss as well as warnings in case daily goals are reached and overtrading is detected.
 
 * **Performance Tracking:** Allows to track user account performance over time, with a time based chart displaying your account performance and return on investment by date with options to filter daily, monthly or yearly. A pie chart is also included as part of the risk management feature showing what percentage of your registered operarions uses a determined risk management plan in order to keep track of what works for you the best.
 
@@ -29,7 +40,7 @@ A small-medium size application I made to act as a trading journal software allw
 
 * **Localization Support:** Supports 9 languages: English, Spanish, chinese, Japanese, Russian, German, Italian, French and Portuguese.
 
-* **WIP:** This is a work in progress project I started back when I was surfing the trading world and I have not been continously working on it, localization is not complete, some features might not behave or be as expected by an expert trader and there might be bugs, any feedback or suggestions is appreciated.
+* **WIP:** This is a work in progress project I started back when I was surfing the trading world and part of my learning curve. I have not been continously working on it, localization is not complete, some features might not behave or be as expected by an expert trader and there might be bugs, any feedback or suggestions is appreciated.
 
 * **Source Available:** This an source available project licensed under Apache 2.0 + Commons Clause - see the LICENSE file for details.
 
@@ -43,7 +54,7 @@ A small-medium size application I made to act as a trading journal software allw
 
 ## Download & Installation
 
-1. Go to the [Releases](https://github.com/your-username/your-repo-name/releases) section.
+1. Go to the [Releases](https://github.com/ADRIANTEJA/AssetOps/releases) section.
 2. Download the latest installer or zipped portable release.
 3. Extract or run the installer to launch the application.
 
@@ -58,5 +69,5 @@ A small-medium size application I made to act as a trading journal software allw
 ### Build Instructions
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   git clone [https://github.com/ADRIANTEJA/AssetOps.git](https://github.com/ADRIANTEJA/AssetOps.git)
    cd your-repo-name
