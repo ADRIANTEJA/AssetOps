@@ -78,6 +78,8 @@ public class AccountAccess
     {
         string command = "SELECT * FROM Account";
 
+        var test = _dataAccessConfig.GetConfiguration()["connection_string"];
+
         using var connection = new SQLiteConnection(_dataAccessConfig.GetConfiguration()["connection_string"]);
         var accounts = await connection.QueryAsync<Account>(command);
         return accounts.ToList();

@@ -12,9 +12,9 @@ public class UIConfigurationServiceTests
     {
         try
         {
-            Assert.True(uiConfigService.GetConfiguration()["IsDarkThemeOn"] != null
-                        && uiConfigService.GetConfiguration()["Language"] != null
-                        && uiConfigService.GetConfiguration()["FontSize"] != null);
+            Assert.True(uiConfigService.Configuration["IsDarkThemeOn"] != null
+                        && uiConfigService.Configuration["Language"] != null
+                        && uiConfigService.Configuration["FontSize"] != null);
         }
         catch (Exception ex)
         {

@@ -5,6 +5,7 @@ namespace UI.Services;
 
 public interface IUIConfigurationService
 {
-    void ApplySettings(UISettings uiSettingsModel);
-    IConfiguration GetConfiguration();   
+    void CreateDefaultSettings(UISettings uiSettingsModel);
+
+    IConfiguration GetConfiguration();
 }

@@ -52,7 +52,9 @@ public partial class ConfirmUpdateWindow : Window
         }
         catch (Exception ex)
         {
+#if RELEASE
             ErrorHandlers.HandleUpdateCheckError(ex.Message);
+#endif
         } 
     }
 

@@ -35,8 +35,9 @@ public static class Constants
 		get 
 		{ 
 			return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                                                            applicationDataFolderName,
-                                                            uiUserSettingsFileName);
+                                                          applicationBaseFolderName,
+														  ApplicationSettingsFolderName,
+                                                          uiUserSettingsFileName);
         }
 	}
 
@@ -60,13 +61,27 @@ public static class Constants
 	/// </summary>
 	public static string AppSettingsProductionFileName => appSettingsProductionFileName;
 
-	private static readonly string applicationDataFolderName = "Asset Ops";
-	/// <summary>
-	/// the name of the folder created to storage user settings files
-	/// </summary>
+	private static readonly string applicationBaseFolderName = "AssetOps";
+    /// <summary>
+    /// the name of the base directory created in the user AppData folder to storage application data
+    /// </summary>
+    public static string ApplicationBaseFolderName => applicationBaseFolderName;
+
+    private static readonly string applicationSettingsFolderName = "UISettings";
+
+    /// <summary>
+    /// the path to the folder created to storage user settings files
+    /// </summary>
+    public static string ApplicationSettingsFolderName => applicationSettingsFolderName;
+
+    /// <summary>
+    /// the name of the folder created in the user AppData folder to storage application data
+    /// </summary>
+    private static readonly string applicationDataFolderName = "Data";
+
 	public static string ApplicationDataFolderName => applicationDataFolderName;
 
-	private static readonly Uri darkThemeDictionarySource = new("Common/Resources/Dictionaries/DarkThemeDictionary.xaml",
+    private static readonly Uri darkThemeDictionarySource = new("Common/Resources/Dictionaries/DarkThemeDictionary.xaml",
 																UriKind.Relative);
 	/// <summary>
 	/// source of the xaml dictionary where dark theme specific resources are storaged
@@ -89,4 +104,12 @@ public static class Constants
 	private static readonly string specificStyleDictionarySourcePath = "Common/Resources/Dictionaries/SpecificStyleDictionary.xaml";
 
 	public static string SpecificStyleDictionarySourcePath => specificStyleDictionarySourcePath;
+
+	private static readonly string createDatabaseScriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataBase.db.sql");
+
+	public static string CreateDatabaseScriptPath => createDatabaseScriptPath;
+
+	public static string productionsSettingsJsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AppSettings.Production.json");
+
+	public static string ProductionSettingsJsonFilePath => productionsSettingsJsonFilePath;
 }

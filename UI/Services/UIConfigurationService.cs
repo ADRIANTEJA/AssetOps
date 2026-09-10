@@ -9,21 +9,24 @@ namespace UI.Services;
 
 public class UIConfigurationService : IUIConfigurationService
 {
-    private readonly string basePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
-                                                    Constants.ApplicationDataFolderName);
+    private readonly string basePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                                                    Constants.ApplicationBaseFolderName,
+                                                    Constants.ApplicationSettingsFolderName);
 
-    public void ApplySettings(UISettings uiSettingsModel)
+    /// <summary>
+    /// Creates the default settings file if it does not exist.
+    /// </summary>
+    /// <param name="uiSettings"></param>
+    public void CreateDefaultSettings(UISettings uiSettings)
     {
         if (!File.Exists(Constants.UIUserSettingsFilePath)) 
-            JsonFileUtils.SerializeJsonFile(uiSettingsModel, Constants.UIUserSettingsFilePath);
+            JsonFileUtils.SerializeJsonFile(uiSettings, Constants.UIUserSettingsFilePath);
     }
 
     public IConfiguration GetConfiguration()
     {
-        IConfigurationBuilder builder = new ConfigurationBuilder()
+        return new ConfigurationBuilder()
             .SetBasePath(basePath)
-            .AddJsonFile(Constants.UIUserSettingsFileName, optional: true, reloadOnChange: true);
-
-        return builder.Build();
+            .AddJsonFile(Constants.UIUserSettingsFileName, optional: true, reloadOnChange: true).Build();
     }
 }

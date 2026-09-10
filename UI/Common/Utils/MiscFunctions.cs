@@ -1,10 +1,10 @@
-﻿using MainModule.DataModel;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using MainModule.Common;
+using MainModule.DataModel;
 using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection.Metadata;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using static MainModule.Common.Enums;
@@ -89,7 +89,10 @@ public static class MiscFunctions
 
         if (OpenFolderDialog.ShowDialog() == true)
         {
-            string sourceFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+            string sourceFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                                                 Constants.ApplicationBaseFolderName,
+                                                 Constants.ApplicationDataFolderName, 
+                                                 fileName);
             string destinationFilePath = Path.Combine(OpenFolderDialog.FolderName, fileName);
 
             if (File.Exists(destinationFilePath))
@@ -137,7 +140,10 @@ public static class MiscFunctions
 
         if (openFileDialog.ShowDialog() == true)
         {
-            string sourceFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+            string sourceFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                                                 Constants.ApplicationBaseFolderName,
+                                                 Constants.ApplicationDataFolderName, 
+                                                 fileName);
             string selectedFilePath = openFileDialog.FileName;
 
             try

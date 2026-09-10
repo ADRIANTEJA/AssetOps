@@ -35,9 +35,9 @@ public partial class MainWindow : Window
         //this calls the method for loading UI settings, if the settings file is missing or bad written
         //it is deleted and recreated thus reseting the application's UI settings and restarting the app
         try { ApplyUIPreferencesOnStartup(); }
-        catch (Exception)
+        catch (Exception ex)
         {
-            ErrorHandlers.HandleUISettingsFileError(); 
+            ErrorHandlers.HandleUISettingsFileError(ex.Message); 
         }
 
         home_button.Background = ResourceAccessHelper.GreenBrushRef;
@@ -70,7 +70,7 @@ public partial class MainWindow : Window
 
     private void ApplyUIPreferencesOnStartup()
     {
-        _uiConfigService.ApplySettings(new());
+        _uiConfigService.CreateDefaultSettings(new());
 
         var config = _uiConfigService.GetConfiguration();
 

@@ -31,14 +31,6 @@ licenseUrl:https://licenses.nuget.org/Apache-2.0
 license Type:Apache-2.0
 
 ####################################################################################################
-Package:Dapper
-Version:2.1.79
-project URL:https://github.com/DapperLib/Dapper
-Description:A high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc. Major Sponsor: Dapper Plus from ZZZ Projects.
-licenseUrl:https://licenses.nuget.org/Apache-2.0
-license Type:Apache-2.0
-
-####################################################################################################
 Package:LiveCharts.Core
 Version:0.9.8
 project URL:
@@ -157,14 +149,6 @@ project URL:https://github.com/PrismLibrary/Prism
 Description:Prism.Events is a library that facilitates communication between loosely coupled components in an application. It provides an event aggregator service that allows publishers and subscribers to interact through events without direct references. With multicast publish/subscribe functionality, multiple publishers can raise the same event, and multiple subscribers can listen to it, enabling flexible and efficient communication.
 licenseUrl:https://www.nuget.org/packages/Prism.Events/9.0.537/License
 license Type:LICENSE
-
-####################################################################################################
-Package:System.Data.SQLite.Core
-Version:1.0.119.0
-project URL:https://system.data.sqlite.org/
-Description:The official SQLite database engine for both x86 and x64 along with the ADO.NET provider.
-licenseUrl:https://www.sqlite.org/copyright.html
-license Type:
 
 ####################################################################################################
 Package:System.Data.SQLite.Core

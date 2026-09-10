@@ -14,7 +14,7 @@ public class ConfigurationService : IConfigurationService
 #if DEBUG
         builder.AddJsonFile(Constants.AppSettingsDevelopmentFileName, optional: true, reloadOnChange: true);
 
-#else   
+#else  
         builder.AddJsonFile(Constants.AppSettingsProductionFileName, optional:true, reloadOnChange: true);
 
 #endif

@@ -79,9 +79,9 @@ public partial class LanguageRadioButton : Grid
             uiSettings.Language = language;
             JsonFileUtils.SerializeJsonFile(uiSettings, Constants.UIUserSettingsFilePath);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            ErrorHandlers.HandleUISettingsFileError(); 
+            ErrorHandlers.HandleUISettingsFileError(ex.Message); 
         }
     }
 }

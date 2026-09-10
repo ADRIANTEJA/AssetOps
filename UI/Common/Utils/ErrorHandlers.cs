@@ -1,4 +1,5 @@
 ﻿using MainModule.Common;
+using MainModule.Common.Utils;
 using System.IO;
 using System.Windows;
 
@@ -6,13 +7,17 @@ namespace UI.Common.Utils;
 
 public static class ErrorHandlers
 {
-    public static void HandleUISettingsFileError()
+    public static void HandleUISettingsFileError(string exceptionMessage)
     {
-        MessageBox.Show((string)Application.Current.FindResource("ui_settings_file_error_message"),
+        MessageBox.Show((string)Application.Current.FindResource("ui_settings_file_error_message") + " Exception: " + exceptionMessage,
                             (string)Application.Current.FindResource("ui_settings_file_error_header"),
                             MessageBoxButton.OK, MessageBoxImage.Error);
 
         File.Delete(Constants.UIUserSettingsFilePath);
+
+        if (!File.Exists(Constants.UIUserSettingsFilePath))
+            JsonFileUtils.SerializeJsonFile(new(), Constants.UIUserSettingsFilePath);
+
         MiscFunctions.RestartApplication();
     }
 

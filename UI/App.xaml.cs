@@ -1,18 +1,25 @@
-﻿using UI.Services;
+﻿using API;
+using Dapper;
+using MainModule.Common;
+using MainModule.Common.Utils;
+using MainModule.DataAccess;
+using MainModule.DataModel;
+using MainModule.Services;
 using MainModule.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Prism.Events;
+using System;
+using System.Data.SQLite;
+using System.IO;
+using System.Text.Json.Nodes;
 using System.Windows;
+using UI.Common.Helpers;
+using UI.Services;
 using UI.Views;
 using UI.Windows;
-using UI.Common.Helpers;
-using MainModule.DataAccess;
-using MainModule.Services;
-using System.IO;
-using MainModule.Common;
-using API;
-using System;
-using Prism.Events;
 using Velopack;
 
 namespace UI;
@@ -20,21 +27,28 @@ namespace UI;
 public partial class App : Application 
 {
     public static IHost? AppHost { get; private set; }
-    private static readonly string appDirectoryPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
-                                                                   Constants.ApplicationDataFolderName);
 
     public App()
     {
         VelopackApp.Build().Run();
-        ConfigureServices();
     }
 
     protected override async void OnStartup(StartupEventArgs e)
     {
+        ConfigureServices();
         await AppHost!.StartAsync();
 
-        if (!Directory.Exists(appDirectoryPath)) { Directory.CreateDirectory(appDirectoryPath); }
+        // Create the application base directory if it doesn't exist
+        CreateAppDirectoryFolder();
+        // Create the application settings directory if it doesn't exist
+        CreateAppDirectoryFolder(Constants.ApplicationSettingsFolderName);
+        // Create the application data directory if it doesn't exist
+        CreateAppDirectoryFolder(Constants.ApplicationDataFolderName);
 
+        ConfigureConnectionStrings();
+        CreateDatabase(AppHost.Services.GetRequiredService<IConfigurationService>().GetConfiguration()["connection_string"]!);
+
+        AppHost.Services.GetRequiredService<IUIConfigurationService>().CreateDefaultSettings(new());
         var startPoint = AppHost.Services.GetRequiredService<MainWindow>();
         startPoint.Show();
         
@@ -46,6 +60,39 @@ public partial class App : Application
         await AppHost!.StopAsync();
 
         base.OnExit(e);
+    }
+
+    private void ConfigureConnectionStrings()
+    {
+        var settingsFile = File.ReadAllText(Constants.ProductionSettingsJsonFilePath);
+
+        var settings = JObject.Parse(settingsFile);
+
+        settings["connection_string"] = $"Data Source={Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
+                                                                    Constants.ApplicationBaseFolderName,  
+                                                                    Constants.ApplicationDataFolderName,
+                                                                    "database.db")};Version=3; foreign keys = true";
+
+        JsonFileUtils.SerializeJsonFile(settings, Constants.ProductionSettingsJsonFilePath);
+    }
+
+    private void CreateDatabase(string connectionString)
+    {
+        string createScript = File.ReadAllText(Constants.CreateDatabaseScriptPath);
+
+        using var connection = new SQLiteConnection(connectionString);
+        connection.Execute(createScript);
+    }
+
+    private void CreateAppDirectoryFolder(string folderPath = "")
+    {
+        var baseDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                                                                   Constants.ApplicationBaseFolderName);
+
+        if (!Directory.Exists(Path.Combine(baseDirectory, folderPath)))
+        {
+            Directory.CreateDirectory(Path.Combine(baseDirectory, folderPath));
+        }
     }
 
     private void ConfigureServices()
@@ -64,7 +111,7 @@ public partial class App : Application
                 //Windows
                 services.AddSingleton(provider => new MainWindow(provider.GetRequiredService<IUIConfigurationService>(),
                                                                  provider.GetRequiredService<IEventAggregator>())
-                {
+                    {
                     DataContext = provider.GetRequiredService<INavigationHelper>()
                 });
                 services.AddTransient(provider => new SelectLanguageWindow(provider.GetRequiredService<IUIConfigurationService>()));

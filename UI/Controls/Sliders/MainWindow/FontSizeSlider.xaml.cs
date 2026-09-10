@@ -1,5 +1,6 @@
 ﻿using MainModule.Common;
 using MainModule.Common.Utils;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -49,9 +50,9 @@ public partial class FontSizeSlider : Grid
             config.FontSize = fontSize;
             JsonFileUtils.SerializeJsonFile(config, Constants.UIUserSettingsFilePath);
         }
-        catch 
+        catch (Exception ex)
         {
-            ErrorHandlers.HandleUISettingsFileError(); 
+            ErrorHandlers.HandleUISettingsFileError(ex.Message); 
         }
     }
 
