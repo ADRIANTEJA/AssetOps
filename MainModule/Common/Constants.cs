@@ -105,11 +105,11 @@ public static class Constants
 
 	public static string SpecificStyleDictionarySourcePath => specificStyleDictionarySourcePath;
 
-	private static readonly string createDatabaseScriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataBase.db.sql");
+	private static readonly string createDatabaseScriptPath = Path.Combine(Environment.CurrentDirectory, "DataBase.db.sql");
 
 	public static string CreateDatabaseScriptPath => createDatabaseScriptPath;
 
-	public static string productionsSettingsJsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AppSettings.Production.json");
+	public static string productionsSettingsJsonFilePath = Path.Combine(Environment.CurrentDirectory, "AppSettings.Production.json");
 
 	public static string ProductionSettingsJsonFilePath => productionsSettingsJsonFilePath;
 }

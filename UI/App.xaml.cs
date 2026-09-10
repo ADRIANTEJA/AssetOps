@@ -45,12 +45,20 @@ public partial class App : Application
         // Create the application data directory if it doesn't exist
         CreateAppDirectoryFolder(Constants.ApplicationDataFolderName);
 
-        ConfigureConnectionStrings();
-        CreateDatabase(AppHost.Services.GetRequiredService<IConfigurationService>().GetConfiguration()["connection_string"]!);
+        try
+        {
+            ConfigureConnectionStrings();
+            CreateDatabase(AppHost.Services.GetRequiredService<IConfigurationService>().GetConfiguration()["connection_string"]!);
 
-        AppHost.Services.GetRequiredService<IUIConfigurationService>().CreateDefaultSettings(new());
-        var startPoint = AppHost.Services.GetRequiredService<MainWindow>();
-        startPoint.Show();
+            AppHost.Services.GetRequiredService<IUIConfigurationService>().CreateDefaultSettings(new());
+            var startPoint = AppHost.Services.GetRequiredService<MainWindow>();
+            startPoint.Show();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+            throw;
+        }
         
         base.OnStartup(e);
     }
