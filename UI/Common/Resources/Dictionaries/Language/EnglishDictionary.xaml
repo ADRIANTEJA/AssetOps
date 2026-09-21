@@ -123,4 +123,6 @@
     <system:String x:Key="calculate_button_text">Calculate</system:String>
     <system:String x:Key="risk_plan_wins_header">Wins</system:String>
     <system:String x:Key="risk_plan_losses_header">Losses</system:String>
+    <system:String x:Key="export_data_button_text">Export Data</system:String>
+    <system:String x:Key="import_data_button_text">Import Data</system:String>
 </ResourceDictionary>

@@ -120,4 +120,6 @@
     <system:String x:Key="calculate_button_text">計算</system:String>
     <system:String x:Key="risk_plan_wins_header">勝ち</system:String>
     <system:String x:Key="risk_plan_losses_header">負け</system:String>
+    <system:String x:Key="export_data_button_text">データをエクスポート</system:String>
+    <system:String x:Key="import_data_button_text">データをインポート</system:String>
 </ResourceDictionary>

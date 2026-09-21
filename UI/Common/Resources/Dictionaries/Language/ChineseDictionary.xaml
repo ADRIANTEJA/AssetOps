@@ -120,4 +120,6 @@
     <system:String x:Key="calculate_button_text">计算</system:String>
     <system:String x:Key="risk_plan_wins_header">胜</system:String>
     <system:String x:Key="risk_plan_losses_header">负</system:String>
+    <system:String x:Key="export_data_button_text">导出数据</system:String>
+    <system:String x:Key="import_data_button_text">导入数据</system:String>
 </ResourceDictionary>
