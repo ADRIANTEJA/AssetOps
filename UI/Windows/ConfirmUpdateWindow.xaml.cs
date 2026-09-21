@@ -49,13 +49,16 @@ public partial class ConfirmUpdateWindow : Window
             await updateManager.DownloadUpdatesAsync(newVersion);
 
             updateManager.ApplyUpdatesAndRestart(newVersion);
+
+            Close();
         }
         catch (Exception ex)
         {
 #if RELEASE
             ErrorHandlers.HandleUpdateCheckError(ex.Message);
 #endif
-        } 
+            Close();
+        }
     }
 
     private void CancelButtonClickHandler(object sender, RoutedEventArgs e)
