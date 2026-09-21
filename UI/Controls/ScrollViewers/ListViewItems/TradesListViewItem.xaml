@@ -46,7 +46,7 @@
                   Checked="OnTradeCheckBoxCheckedHandler" Unchecked="OnTradeCheckBoxUncheckedHandler"/>
 
         <TextBlock Grid.Column="1"
-                   Text="Status"
+                   Text="{DynamicResource trade_status_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -82,7 +82,7 @@
 
         <TextBlock Grid.Column="1"
                    Grid.Row="2"
-                   Text="Side"
+                   Text="{DynamicResource trade_side_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -100,7 +100,7 @@
         </Border>
 
         <TextBlock Grid.Column="2"
-                   Text="Open date"
+                   Text="{DynamicResource open_date_filter_text}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -118,12 +118,12 @@
 
         <TextBlock Grid.Column="2"
                    Grid.Row="2"
-                   Text="Close date"
+                   Text="{DynamicResource close_date_filter_text}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="3"
-                   Text="Open price"
+                   Text="{DynamicResource ROI_calculation_view_open_price_field}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -135,7 +135,7 @@
 
         <TextBlock Grid.Column="3"
                    Grid.Row="2"
-                   Text="Close price"
+                   Text="{DynamicResource ROI_calculation_view_close_price_field}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -169,7 +169,7 @@
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="5"
-                   Text="Asset"
+                   Text="{DynamicResource trade_asset_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -181,7 +181,7 @@
 
         <TextBlock Grid.Column="5"
                    Grid.Row="2"
-                   Text="Volume"
+                   Text="{DynamicResource trade_volume_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -192,7 +192,7 @@
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="6"
-                   Text="Costs"
+                   Text="{DynamicResource trade_costs_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -245,7 +245,7 @@
         </TextBlock>
 
         <TextBlock Grid.Column="7"
-                   Text="Images"
+                   Text="{DynamicResource trade_images_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -257,7 +257,7 @@
 
         <TextBlock Grid.Column="7"
                    Grid.Row="2"
-                   Text="Notes"
+                   Text="{DynamicResource trade_notes_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -267,7 +267,7 @@
                                              Click="OpenTradeNotesWindowHandler"/>
 
         <TextBlock Grid.Column="8"
-                   Text="Edit"
+                   Text="{DynamicResource edit_trade_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -278,7 +278,7 @@
 
         <TextBlock Grid.Column="8"
                    Grid.Row="2"
-                   Text="Mistakes"
+                   Text="{DynamicResource trade_mistakes_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -288,7 +288,7 @@
                                                 Click="OpenTradeMistakesWindowHandler"/>
 
         <TextBlock Grid.Column="9"
-                   Text="Risk management"
+                   Text="{DynamicResource trade_risk_management_plan_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -329,7 +329,7 @@
 
         <TextBlock Grid.Row="2"
                    Grid.Column="6"
-                   Text="Leverage"
+                   Text="{DynamicResource leverage_slider_leverage_label}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 

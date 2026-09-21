@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using UI.Common.Converters;
+using UI.Common.Helpers;
 using UI.Events;
 using static MainModule.Common.Enums;
 
@@ -60,12 +61,14 @@ public partial class TradesListViewItem : Border
             switch (contextTrade.Side)
             {
                 case TradeSide.Long:
-                    if (contextTrade.ClosePrice >= contextTrade.OpenPrice) trade_status_textblock.Text = "WIN";
-                    else trade_status_textblock.Text = "LOSS";
+                    if (contextTrade.ClosePrice >= contextTrade.OpenPrice) trade_status_textblock.Text = 
+                            Application.Current.FindResource(ResourceAccessHelper.WinFilterButtonText).ToString();
+                    else trade_status_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.LossFilterButtonText).ToString();
                     break;
                 case TradeSide.Short:
-                    if (contextTrade.ClosePrice <= contextTrade.OpenPrice) trade_status_textblock.Text = "WIN";
-                    else trade_status_textblock.Text = "LOSS";
+                    if (contextTrade.ClosePrice <= contextTrade.OpenPrice) trade_status_textblock.Text =
+                            Application.Current.FindResource(ResourceAccessHelper.WinFilterButtonText).ToString(); 
+                    else trade_status_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.LossFilterButtonText).ToString(); ;
                     break;
             }
         }
@@ -75,8 +78,9 @@ public partial class TradesListViewItem : Border
     {
         var contextTrade = (Trade)DataContext;
 
-        if (contextTrade.Side == TradeSide.Long) trade_side_textblock.Text = "LONG";
-        else trade_side_textblock.Text = "SHORT";
+        if (contextTrade.Side == TradeSide.Long) trade_side_textblock.Text =
+                Application.Current.FindResource(ResourceAccessHelper.LongButtonText).ToString();
+        else trade_side_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.ShortButtonText).ToString();
     }
 
     private void OnTradeRiskWarningMouseEnterHandler(object sender, MouseEventArgs e)

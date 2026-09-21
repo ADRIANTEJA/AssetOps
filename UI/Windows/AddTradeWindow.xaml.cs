@@ -1,7 +1,5 @@
 ﻿using API.Events;
 using MainModule.ViewModels;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Prism.Events;
 using System;
 using System.Windows;
@@ -130,7 +128,7 @@ public partial class AddTradeWindow : Window
 
         if (optionsListView.Items.Count == 0)
         {
-            input_error_textblock.Text = "No symbols available";
+            input_error_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.AddTradeInputErrorMessage).ToString();
             isValid = false;
         }
 

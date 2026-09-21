@@ -11,7 +11,7 @@
         Height="50" 
         Width="250">
 
-    <TextBlock Text="Risk management plan max trade risk diretive violated"
+    <TextBlock Text="{DynamicResource trade_risk-constraint_warning_message}"
                TextWrapping="Wrap"
                Style="{StaticResource base_textblock_style}"
                Foreground="{StaticResource warning_yellow_brush}"

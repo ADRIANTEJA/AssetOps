@@ -78,7 +78,7 @@
                     <ColumnDefinition Width="32"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Add strategy"
+                <TextBlock Text="{DynamicResource add_strategy_window_header}"
                            VerticalAlignment="Center"
                            Style="{StaticResource base_textblock_style}" 
                            Margin="64,0,0,0"/>
@@ -153,7 +153,7 @@
 
                         <textBoxes:PlaceHolderTextBox x:Name="name_field"
                                                       Text="{Binding Path=NameVM, Mode=OneWayToSource}"
-                                                      PlaceHolder="Name"
+                                                      PlaceHolder="{DynamicResource account_name_header}"
                                                       MaxLength="15"
                                                       Margin="0,0,30,10" 
                                                       KeyDown="JumpToNextFieldHandler" 
@@ -161,7 +161,7 @@
                         <textBoxes:PlaceHolderTextBox x:Name="intermediary_field"
                                                       Grid.Row="1"
                                                       Text="{Binding Path=IntermediaryVM, Mode=OneWayToSource}"
-                                                      PlaceHolder="Intermediary"
+                                                      PlaceHolder="{DynamicResource risk_plan_intermediary_header}"
                                                       MaxLength="15"
                                                       Margin="0,0,30,11"
                                                       KeyDown="JumpToNextFieldHandler"/>
@@ -169,7 +169,7 @@
                         <textBoxes:PlaceHolderTextBox x:Name="max_trade_risk_field"
                                                       Grid.Row="2"
                                                       Text="{Binding Path=MaxTradeRiskVM, Mode=OneWayToSource}"
-                                                      PlaceHolder="Max trade risk"
+                                                      PlaceHolder="{DynamicResource risk_plan_max_trade_risk_header}"
                                                       MaxLength="{StaticResource max_numeric_input_length}"
                                                       Margin="0,0,30,11"
                                                       TextChanged="ValidateNumericValueHandler"
@@ -194,7 +194,7 @@
                         <textBoxes:PlaceHolderTextBox x:Name="daily_goal_field"
                                                       Grid.Row="3"
                                                       Text="{Binding Path=DailyGoalVM, Mode=OneWayToSource}"
-                                                      PlaceHolder="Daily goal"
+                                                      PlaceHolder="{DynamicResource risk_plan_daily_goal_header}"
                                                       MaxLength="{StaticResource max_numeric_input_length}"
                                                       Margin="0,0,30,11"
                                                       TextChanged="ValidateNumericValueHandler"
@@ -219,7 +219,7 @@
                         <textBoxes:PlaceHolderTextBox x:Name="max_daily_loss_field"
                                                       Grid.Row="4"
                                                       Text="{Binding Path=MaxDailyLossVM, Mode=OneWayToSource}"
-                                                      PlaceHolder="Max daily loss"
+                                                      PlaceHolder="{DynamicResource risk_plan_max_daily_loss_header}"
                                                       MaxLength="{StaticResource max_numeric_input_length}"
                                                       Margin="0,0,30,11"
                                                       TextChanged="ValidateNumericValueHandler"
@@ -240,7 +240,7 @@
                                Margin="206,6,9,16"
                                MouseEnter="InfoIconMouseEnterHandler"/>
 
-                        <TextBlock Text="Risk reward ratio"
+                        <TextBlock Text="{DynamicResource risk_plan_risk_reward_ratio_header}"
                                    Grid.Row="5"
                                    Style="{StaticResource base_textblock_style}"
                                    VerticalAlignment="Bottom"
@@ -266,7 +266,7 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.ColumnSpan="2"
-                                   Text="Goal"
+                                   Text="{DynamicResource strategy_goal_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 

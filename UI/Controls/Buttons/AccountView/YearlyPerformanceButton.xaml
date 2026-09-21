@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:UI.Controls.Buttons.AccountView"
         mc:Ignorable="d"
-        Content="Yearly"
+        Content="{DynamicResource yearly_performance_button}"
         Style="{StaticResource navigation_button_style}"
         d:DesignHeight="32" 
         d:DesignWidth="100">

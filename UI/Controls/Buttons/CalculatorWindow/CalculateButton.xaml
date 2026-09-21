@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              Style="{StaticResource text_buttons_style}"
-             Content="Calculate"
+             Content="{DynamicResource calculate_button_text}"
              mc:Ignorable="d" 
              d:DesignHeight="32" 
              d:DesignWidth="100">

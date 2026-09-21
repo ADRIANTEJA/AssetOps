@@ -386,7 +386,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Filter"
+                        <TextBlock Text="{DynamicResource filer_expand_options_control_text}"
                                    Style="{StaticResource base_textblock_style}"
                                    VerticalAlignment="Center"/>
 

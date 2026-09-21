@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:UI.Controls.Buttons.AccountView"
         Style="{StaticResource navigation_button_style}"
-        Content="Daily"
+        Content="{DynamicResource daily_performance_button}"
         mc:Ignorable="d" 
         d:DesignHeight="32" 
         d:DesignWidth="100">

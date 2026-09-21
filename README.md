@@ -3,7 +3,7 @@
 [![License: Source-Available (Apache 2.0 + Commons Clause)](https://img.shields.io/badge/License-Apache_2.0_w%2F_Commons_Clause-orange.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)]()
 
-A small-medium size application I made to act as a trading journal software allwing traders to keep track of their operation on the market and their performance over time locally without relaying on paid subscription services'
+A small-medium size application I made to act as a trading journal software allwing traders to keep track of their operation on the market and their performance over time locally without relaying on paid subscription services.
 
 ---
 
@@ -42,7 +42,7 @@ A small-medium size application I made to act as a trading journal software allw
 
 * **WIP:** This is a work in progress project I started back when I was surfing the trading world and part of my learning curve. I have not been continously working on it, localization is not complete, some features might not behave or be as expected by an expert trader and there might be bugs, any feedback or suggestions is appreciated.
 
-* **Source Available:** This an source available project licensed under Apache 2.0 + Commons Clause - see the LICENSE file for details.
+* **Source Available:** This is a source available project licensed under Apache 2.0 + Commons Clause - see the LICENSE file for details.
 
 ---
 

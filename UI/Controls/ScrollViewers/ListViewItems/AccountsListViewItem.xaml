@@ -27,22 +27,22 @@
         <Border Grid.ColumnSpan="3"
                 Background="{StaticResource green_brush}"/>
 
-        <TextBlock Text="Name"
+        <TextBlock Text="{DynamicResource account_name_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="1"
-                   Text="Initial Balance"
+                   Text="{DynamicResource account_initial_balance_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="2"
-                   Text="Balance"
+                   Text="{DynamicResource account_balance_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="2"
-                   Text="Broke"
+                   Text="{DynamicResource account_broke_warning}"
                    Visibility="{Binding Path=BankruptcyStatus, Mode=OneWay,
                                 Converter={StaticResource account_in_bankrupt_visibility_converter}}"
                    Style="{StaticResource base_textblock_style}"

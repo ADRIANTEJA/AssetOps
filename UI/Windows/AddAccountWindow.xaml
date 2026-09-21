@@ -39,7 +39,7 @@
                     <ColumnDefinition Width="32"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Add Account"
+                <TextBlock Text="{DynamicResource add_account_window_header}"
                            VerticalAlignment="Center"
                            Style="{StaticResource base_textblock_style}" 
                            Margin="64,0,0,0"/>
@@ -53,13 +53,13 @@
             <textBoxes:PlaceHolderTextBox x:Name="account_name_field"
                                           Text="{Binding Path=NameVM, Mode=OneWayToSource}"
                                           MaxLength="15"
-                                          PlaceHolder="Name"
+                                          PlaceHolder="{DynamicResource account_name_header}"
                                           Grid.Row="2" 
                                           Margin="40,10,40,0" 
                                           TextChanged="OnNameFieldChangedHandler" 
                                           KeyDown="JumpToNextFieldHandler"/>
             <textBoxes:PlaceHolderTextBox x:Name="account_initial_balance_field"
-                                          PlaceHolder="Initial Balance"
+                                          PlaceHolder="{DynamicResource account_initial_balance_header}"
                                           Text="{Binding Path=InitialBalanceVM, Mode=OneWayToSource}"
                                           Grid.Row="3"
                                           MaxLength="{StaticResource max_numeric_input_length}"

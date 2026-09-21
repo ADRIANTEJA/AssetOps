@@ -174,8 +174,9 @@
 
     <TextBlock x:Name="leverage_label"
                Text="{DynamicResource leverage_slider_leverage_label}"
-               Grid.ColumnSpan="6"
-               Style="{StaticResource base_textblock_style}"/>
+               Grid.ColumnSpan="4"
+               HorizontalAlignment="Right"
+               Style="{StaticResource base_textblock_style}" Margin="0,0,15,0"/>
 
     <TextBlock Text="{Binding ElementName=leverage_slider, Path=Value}"
                Grid.Column="4"

@@ -27,12 +27,12 @@
         <Border Grid.ColumnSpan="3"
                 Background="{StaticResource green_brush}"/>
 
-        <TextBlock Text="Pair"
+        <TextBlock Text="{DynamicResource symbol_pair_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="1"
-                   Text="Asset type"
+                   Text="{DynamicResource add_trade_window_asset_type_selector_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 

@@ -33,7 +33,7 @@
                     <ColumnDefinition Width="32"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Costs"
+                <TextBlock Text="{DynamicResource trade_costs_header}"
                            VerticalAlignment="Center"
                            Style="{StaticResource base_textblock_style}" 
                            Margin="64,0,0,0"/>
@@ -64,35 +64,35 @@
                         <RowDefinition Height="43"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Open cost:"
+                    <TextBlock Text="{DynamicResource trade_open_cost_header}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right" 
                                Margin="0,0,5,0"/>
 
                     <TextBlock Grid.Row="1"
-                               Text="Swap:"
+                               Text="{DynamicResource trade_swap_header}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right" 
                                Margin="0,0,5,0"/>
 
                     <TextBlock Grid.Row="2"
-                               Text="Spread:"
+                               Text="{DynamicResource trade_spread_header}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right" 
                                Margin="0,0,5,0"/>
 
                     <TextBlock Grid.Row="3"
-                               Text="Commissions:"
+                               Text="{DynamicResource trade_commissions_header}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right" 
                                Margin="0,0,5,0"/>
 
                     <TextBlock Grid.Row="4"
-                               Text="Other costs:"
+                               Text="{DynamicResource trade_other_costs_header}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Right" 

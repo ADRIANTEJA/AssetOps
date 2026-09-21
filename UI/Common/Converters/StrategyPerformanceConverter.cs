@@ -4,6 +4,7 @@ using LiveCharts.Wpf;
 using MainModule.DataModel;
 using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 using UI.Common.Helpers;
@@ -22,7 +23,7 @@ public class StrategyPerformanceConverter : IValueConverter
             var winPieSeries = new PieSeries
             {
                 Values = new ChartValues<ObservableValue> { new(strategy.Wins) },
-                Title = "Wins",
+                Title = Application.Current.FindResource(ResourceAccessHelper.RiskPlanWinsText).ToString(),
                 LabelPoint = (Func<ChartPoint, string>)ResourceAccessHelper.StrategyPerformanceLabelFormaterRef,
                 DataLabels = true,
                 FontSize = ResourceAccessHelper.FontSize,
@@ -33,7 +34,7 @@ public class StrategyPerformanceConverter : IValueConverter
             var lossPieSeries = new PieSeries
             {
                 Values = new ChartValues<ObservableValue>() { new(strategy.Losses) },
-                Title = "Losses",
+                Title = Application.Current.FindResource(ResourceAccessHelper.RiskPlanLossesText).ToString(),
                 LabelPoint = (Func<ChartPoint, string>)ResourceAccessHelper.StrategyPerformanceLabelFormaterRef,
                 DataLabels = true,
                 FontSize = ResourceAccessHelper.FontSize,

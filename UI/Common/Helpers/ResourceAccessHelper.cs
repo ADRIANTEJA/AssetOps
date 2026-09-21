@@ -90,4 +90,36 @@ public static class ResourceAccessHelper
     public static string UpdatePromptPart2Key => updatePromptPart2Key;
 
     public static string MissingSymbolErrorKey => missingSymbolErrorKey;
+
+    private static readonly string winFilterButtonText = "win_filter_button_text";
+
+    public static string WinFilterButtonText => winFilterButtonText;
+
+    private static readonly string lossFilterButtonText = "loss_filter_button_text";
+
+    public static string LossFilterButtonText => lossFilterButtonText;
+
+    private static readonly string openFilterButtonText = "open_filter_button_text";
+
+    public static string OpenFilterButtonText => openFilterButtonText;
+
+    private static readonly string longButtonText = "long_button_text";
+
+    public static string LongButtonText => longButtonText;
+
+    private static readonly string shortButtonText = "short_button_text";
+
+    public static string ShortButtonText => shortButtonText;
+
+    private static readonly string riskPlanWinsText = "Wins";
+
+    public static string RiskPlanWinsText => riskPlanWinsText;
+
+    private static readonly string riskPlanLossesText = "Losses";
+
+    public static string RiskPlanLossesText => riskPlanLossesText;
+
+    private static readonly string addTradeInputErrorMessage = "add_trade_input_textblock_message";
+
+    public static string AddTradeInputErrorMessage => addTradeInputErrorMessage;
 }

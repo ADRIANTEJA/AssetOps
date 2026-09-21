@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
         Style="{StaticResource text_buttons_style}"
-        Content="Delete Account"
+        Content="{DynamicResource delete_account_button_text}"
         d:DesignHeight="32" 
         d:DesignWidth="100">
 </Button>

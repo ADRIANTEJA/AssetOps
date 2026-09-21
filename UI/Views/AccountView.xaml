@@ -154,7 +154,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Account Performance"
+            <TextBlock Text="{DynamicResource performance_textblock_header}"
                        Style="{StaticResource base_textblock_style}"
                        VerticalAlignment="Center"
                        FontSize="18"/>
@@ -227,7 +227,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="Filter by date"
+                            <TextBlock Text="{DynamicResource filter_by_date_expander_header}"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Center"/>
 
@@ -270,7 +270,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Strategy Usage"
+            <TextBlock Text="{DynamicResource risk_plan_usage_textblock_header}"
                        Style="{StaticResource base_textblock_style}"
                        VerticalAlignment="Center"
                        FontSize="18"/>

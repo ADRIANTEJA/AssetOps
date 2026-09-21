@@ -47,7 +47,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Performance"
+            <TextBlock Text="{DynamicResource strategy_performance_header}"
                        VerticalAlignment="Center"
                        Style="{StaticResource base_textblock_style}"
                        FontSize="18"/>
@@ -95,7 +95,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Goal"
+            <TextBlock Text="{DynamicResource strategy_goal_header}"
                        VerticalAlignment="Center"
                        Style="{StaticResource base_textblock_style}"
                        FontSize="18"/>

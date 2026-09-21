@@ -198,7 +198,7 @@
                            Margin="0,0,2,0"/>
                 
                 <TextBlock Grid.Column="1"
-                           Text="Trades"
+                           Text="{DynamicResource trade_textblock_header}"
                            Style="{StaticResource base_textblock_style}"
                            FontSize="18"
                            VerticalAlignment="Center"
@@ -211,7 +211,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Performance"
+            <TextBlock Text="{DynamicResource performance_textblock_header}"
                        Style="{StaticResource base_textblock_style}"
                        VerticalAlignment="Center"
                        FontSize="18"/>
@@ -274,7 +274,7 @@
                                                    Click="SideFilterButtonClickHandler"/>
 
                     <TextBlock Grid.Column="5"
-                               Text="Open Date"
+                               Text="{DynamicResource open_date_filter_text}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"/>
 
@@ -284,7 +284,7 @@
                                 SelectedDateChanged="FilterDateChangedHandler"/>
 
                     <TextBlock Grid.Column="7"
-                               Text="Close Date"
+                               Text="{DynamicResource close_date_filter_text}"
                                Style="{StaticResource base_textblock_style}"
                                VerticalAlignment="Center"/>
 
@@ -457,7 +457,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="Indices"
+                                <TextBlock Text="{DynamicResource indices_expander_header}"
                                            Style="{StaticResource base_textblock_style}"
                                            VerticalAlignment="Center"/>
 
@@ -557,7 +557,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="Stocks"
+                                <TextBlock Text="{DynamicResource stocks_expander_header}"
                                            Style="{StaticResource base_textblock_style}"
                                            VerticalAlignment="Center"/>
 
@@ -607,7 +607,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="Commodities"
+                                <TextBlock Text="{DynamicResource commodities_expander_header}"
                                            Style="{StaticResource base_textblock_style}"
                                            VerticalAlignment="Center"/>
 
@@ -669,7 +669,7 @@
                 Style="{StaticResource control_wrapper_border_style}"
                 Margin="5">
 
-            <TextBlock Text="Strategy Usage"
+            <TextBlock Text="{DynamicResource risk_plan_usage_textblock_header}"
                        Style="{StaticResource base_textblock_style}"
                        VerticalAlignment="Center"
                        FontSize="18"/>

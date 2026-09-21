@@ -32,18 +32,18 @@
         <Border Grid.ColumnSpan="5"
                 Background="{StaticResource green_brush}"/>
 
-        <TextBlock Text="Name"
+        <TextBlock Text="{DynamicResource account_name_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
 
         <TextBlock Grid.Column="1"
-                   Text="Intermediary"
+                   Text="{DynamicResource risk_plan_intermediary_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="2"
-                   Text="Analysis Notes"
+                   Text="{DynamicResource risk_plan_analysis_notes_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -71,7 +71,7 @@
                                                 Click="OpenEditStrategyWindowHandler"/>
 
         <TextBlock Grid.Column="3"
-                   Text="Edit"
+                   Text="{DynamicResource edit_trade_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
@@ -80,25 +80,25 @@
                 Background="{StaticResource green_brush}"/>
 
         <TextBlock Grid.Row="2"
-                   Text="Daily Goal"
+                   Text="{DynamicResource risk_plan_daily_goal_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="1"
                    Grid.Row="2"
-                   Text="Max Daily Loss"
+                   Text="{DynamicResource risk_plan_max_daily_loss_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="2"
                    Grid.Row="2"
-                   Text="Max Trade Risk"
+                   Text="{DynamicResource risk_plan_max_trade_risk_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 
         <TextBlock Grid.Column="3"
                    Grid.Row="2"
-                   Text="Risk Reward Ratio"
+                   Text="{DynamicResource risk_plan_risk_reward_ratio_header}"
                    VerticalAlignment="Center"
                    Style="{StaticResource base_textblock_style}"/>
 

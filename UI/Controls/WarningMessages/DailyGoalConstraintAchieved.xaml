@@ -11,7 +11,7 @@
         Height="70" 
         Width="250">
 
-    <TextBlock Text="Risk management plan daily goal achieved overtrading is not recommended"
+    <TextBlock Text="{DynamicResource daily_goal_constraint_warning_message}"
            TextWrapping="Wrap"
            Style="{StaticResource base_textblock_style}"
            Foreground="{StaticResource warning_yellow_brush}"

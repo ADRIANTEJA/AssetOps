@@ -39,7 +39,7 @@
                     <ColumnDefinition Width="32"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Edit Trade"
+                <TextBlock Text="{DynamicResource edit_trade_header}"
                            VerticalAlignment="Center"
                            Style="{StaticResource base_textblock_style}" 
                            Margin="64,0,0,0"/>
@@ -97,7 +97,7 @@
                                 <RowDefinition Height="50"/>
                             </Grid.RowDefinitions>
 
-                            <TextBlock Text="Volume"
+                            <TextBlock Text="{DynamicResource trade_volume_header}"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
                                        HorizontalAlignment="Left" 
@@ -111,7 +111,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Open price"
+                            <TextBlock Text="{DynamicResource ROI_calculation_view_open_price_field}"
                                        Grid.Row="2"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -126,7 +126,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Close price"
+                            <TextBlock Text="{DynamicResource ROI_calculation_view_close_price_field}"
                                        Grid.Row="4"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -142,7 +142,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Swap"
+                            <TextBlock Text="{DynamicResource trade_swap_header}"
                                        Grid.Row="6"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -158,7 +158,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Spread"
+                            <TextBlock Text="{DynamicResource trade_spread_header}"
                                        Grid.Row="8"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -174,7 +174,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Commissions"
+                            <TextBlock Text="{DynamicResource trade_commissions_header}"
                                        Grid.Row="10"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -190,7 +190,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Other costs"
+                            <TextBlock Text="{DynamicResource trade_other_costs_header}"
                                        Grid.Row="12"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -206,7 +206,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Take profit"
+                            <TextBlock Text="{DynamicResource trade_take_profit_header}"
                                        Grid.Row="14"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -222,7 +222,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Stop Loss"
+                            <TextBlock Text="{DynamicResource trade_stop_loss_header}"
                                        Grid.Row="16"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -238,7 +238,7 @@
                                                           KeyDown="JumpToNextFieldHandler"
                                                           TextChanged="ValidateNumericValueHandler"/>
 
-                            <TextBlock Text="Open date"
+                            <TextBlock Text="{DynamicResource open_date_filter_text}"
                                        Grid.Row="18"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -255,7 +255,7 @@
                                         Loaded="OnOpenDateFieldLoaded"
                                         Unloaded="OpenDateFiledUnloadedHandler"/>
 
-                            <TextBlock Text="Close date"
+                            <TextBlock Text="{DynamicResource close_date_filter_text}"
                                        Grid.Row="20"
                                        Style="{StaticResource base_textblock_style}"
                                        VerticalAlignment="Bottom"
@@ -287,7 +287,7 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.ColumnSpan="2"
-                                   Text="Notes"
+                                   Text="{DynamicResource trade_notes_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 
@@ -302,7 +302,7 @@
 
                         <TextBlock Grid.Row="2"
                                    Grid.ColumnSpan="2"
-                                   Text="Mistakes"
+                                   Text="{DynamicResource trade_mistakes_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 

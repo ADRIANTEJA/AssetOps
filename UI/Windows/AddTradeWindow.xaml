@@ -96,7 +96,7 @@
                     <ColumnDefinition Width="32"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Add trade"
+                <TextBlock Text="{DynamicResource add_trade_window_header}"
                            VerticalAlignment="Center"
                            Style="{StaticResource base_textblock_style}" 
                            Margin="64,0,0,0"/>
@@ -145,7 +145,7 @@
 
                             <textBoxes:PlaceHolderTextBox x:Name="volume_field"
                                                           Text="{Binding Path=VolumeVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Volume"
+                                                          PlaceHolder="{DynamicResource trade_volume_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -153,7 +153,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="open_price_field"
                                                           Grid.Row="1"
                                                           Text="{Binding Path=OpenPriceVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Open price"
+                                                          PlaceHolder="{DynamicResource ROI_calculation_view_open_price_field}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -161,7 +161,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="close_price_field"
                                                           Grid.Row="2"
                                                           Text="{Binding Path=ClosePriceVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Close price"
+                                                          PlaceHolder="{DynamicResource ROI_calculation_view_close_price_field}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -169,7 +169,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="swap_field"
                                                           Grid.Row="3"
                                                           Text="{Binding Path=SwapVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Swap"
+                                                          PlaceHolder="{DynamicResource trade_swap_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -177,7 +177,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="spread_field"
                                                           Grid.Row="4"
                                                           Text="{Binding Path=SpreadVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Spread"
+                                                          PlaceHolder="{DynamicResource trade_spread_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -185,7 +185,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="commissions_field"
                                                           Grid.Row="5"
                                                           Text="{Binding Path=CommissionVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Commissions"
+                                                          PlaceHolder="{DynamicResource trade_commissions_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -193,7 +193,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="other_costs_field"
                                                           Grid.Row="6"
                                                           Text="{Binding Path=OtherCostsVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Other costs"
+                                                          PlaceHolder="{DynamicResource trade_other_costs_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -201,7 +201,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="take_profit_field"
                                                           Grid.Row="7"
                                                           Text="{Binding Path=TakeProfitVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Take profit"
+                                                          PlaceHolder="{DynamicResource trade_take_profit_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -209,7 +209,7 @@
                             <textBoxes:PlaceHolderTextBox x:Name="stop_loss_field"
                                                           Grid.Row="8"
                                                           Text="{Binding Path=StopLossVM, Mode=OneWayToSource}"
-                                                          PlaceHolder="Stop loss"
+                                                          PlaceHolder="{DynamicResource trade_stop_loss_header}"
                                                           MaxLength="{StaticResource max_numeric_input_length}"
                                                           Margin="0,0,5,11"
                                                           KeyDown="JumpToNextFieldHandler"
@@ -218,7 +218,7 @@
                             <DatePicker x:Name="open_date_field"
                                         Grid.Row="9"
                                         SelectedDate="{Binding Path=OpenDateVM, Mode=OneWayToSource}"
-                                        Tag="Open date"
+                                        Tag="{DynamicResource open_date_filter_text}"
                                         Style="{StaticResource base_date_picker_style}"
                                         Margin="0,0,5,5" 
                                         Loaded="OnOpenDateFieldLoaded"
@@ -227,7 +227,7 @@
                             <DatePicker x:Name="close_date_field"
                                         Grid.Row="10"
                                         SelectedDate="{Binding Path=CloseDateVM, Mode=OneWayToSource}"
-                                        Tag="Close date"
+                                        Tag="{DynamicResource close_date_filter_text}"
                                         Style="{StaticResource base_date_picker_style}"
                                         Margin="0,0,5,5" 
                                         Loaded="OnCloseDateFieldLoaded"
@@ -258,13 +258,13 @@
                                    Style="{StaticResource base_textblock_style}"/>
 
                         <TextBlock Grid.Column="1"
-                                   Text="Symbol"
+                                   Text="{DynamicResource symbol_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 
                         <TextBlock Grid.ColumnSpan="2"
                                    Grid.Row="2"
-                                   Text="Risk management plan"
+                                   Text="{DynamicResource risk_management_plan_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 
@@ -300,7 +300,7 @@
 
                         <TextBlock Grid.Row="4"
                                    Grid.ColumnSpan="2"
-                                   Text="Notes"
+                                   Text="{DynamicResource trade_notes_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 
@@ -315,7 +315,7 @@
 
                         <TextBlock Grid.Row="6"
                                    Grid.ColumnSpan="2"
-                                   Text="Mistakes"
+                                   Text="{DynamicResource trade_mistakes_header}"
                                    VerticalAlignment="Center"
                                    Style="{StaticResource base_textblock_style}"/>
 
