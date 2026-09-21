@@ -23,7 +23,6 @@ public class StrategyPerformanceConverter : IValueConverter
             var winPieSeries = new PieSeries
             {
                 Values = new ChartValues<ObservableValue> { new(strategy.Wins) },
-                Title = Application.Current.FindResource(ResourceAccessHelper.RiskPlanWinsText).ToString(),
                 LabelPoint = (Func<ChartPoint, string>)ResourceAccessHelper.StrategyPerformanceLabelFormaterRef,
                 DataLabels = true,
                 FontSize = ResourceAccessHelper.FontSize,
@@ -31,10 +30,11 @@ public class StrategyPerformanceConverter : IValueConverter
                 Stroke = new SolidColorBrush { Color = Color.FromRgb(255, 255, 255) },
                 StrokeThickness = 1.5,
             };
+            winPieSeries.SetResourceReference(PieSeries.TitleProperty, ResourceAccessHelper.RiskPlanWinsText);
+
             var lossPieSeries = new PieSeries
             {
                 Values = new ChartValues<ObservableValue>() { new(strategy.Losses) },
-                Title = Application.Current.FindResource(ResourceAccessHelper.RiskPlanLossesText).ToString(),
                 LabelPoint = (Func<ChartPoint, string>)ResourceAccessHelper.StrategyPerformanceLabelFormaterRef,
                 DataLabels = true,
                 FontSize = ResourceAccessHelper.FontSize,
@@ -42,6 +42,7 @@ public class StrategyPerformanceConverter : IValueConverter
                 Stroke = new SolidColorBrush { Color = Color.FromRgb(255, 255, 255) },
                 StrokeThickness = 1.5,
             };
+            lossPieSeries.SetResourceReference(PieSeries.TitleProperty, ResourceAccessHelper.RiskPlanLossesText);
 
             performanceSeries = [winPieSeries, lossPieSeries];
             return performanceSeries;

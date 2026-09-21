@@ -26,7 +26,7 @@ public partial class ThemeOptions : Grid
         Application.Current.Resources.MergedDictionaries.Add(new() { Source = Constants.LightThemeDictionarySource });
         Application.Current.Resources.MergedDictionaries.Remove(new() { Source = Constants.DarkThemeDictionarySource });
 
-        light_theme_button.BorderBrush = (SolidColorBrush)Application.Current.FindResource("theme_background_inverse_brush");
+        light_theme_button.SetResourceReference(Button.BorderBrushProperty, "theme_background_inverse_brush");
         dark_theme_button.BorderBrush = null;
 
         SaveThemeSettings(false);
@@ -37,7 +37,7 @@ public partial class ThemeOptions : Grid
         Application.Current.Resources.MergedDictionaries.Add(new() { Source = Constants.DarkThemeDictionarySource });
         Application.Current.Resources.MergedDictionaries.Remove(new() { Source = Constants.LightThemeDictionarySource });
 
-        dark_theme_button.BorderBrush = (SolidColorBrush)Application.Current.FindResource("theme_background_inverse_brush");
+        dark_theme_button.SetResourceReference(Button.BorderBrushProperty, "theme_background_inverse_brush");
         light_theme_button.BorderBrush = null;
 
         SaveThemeSettings(true);

@@ -5,7 +5,7 @@
     <SolidColorBrush x:Key="theme_background_brush" Color="#ffffff"/>
     <SolidColorBrush x:Key="theme_control_wrapper_background_brush" Color="#EFF0F0"/>
     <!--for controls that require inverse color highlight-->
-    <SolidColorBrush x:Key="theme_background_inverse_brush" Color="#151515"/>
+    <SolidColorBrush x:Key="theme_background_inverse_brush" Color="#00735C"/>
     <SolidColorBrush x:Key="theme_button_highlight_brush" Color="#3FB4B4B4"/>
     <SolidColorBrush x:Key="theme_button_on_click_brush" Color="#3F787878"/>
     <SolidColorBrush x:Key="theme_font_brush" Color="#00B97E"/>

@@ -55,20 +55,18 @@ public partial class TradesListViewItem : Border
     {
         var contextTrade = (Trade)DataContext;
 
-        if (contextTrade.Status == TradeStatus.Open) trade_status_textblock.Text = "OPEN";
+        if (contextTrade.Status == TradeStatus.Open) trade_status_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.OpenFilterButtonText);
         else
         {
             switch (contextTrade.Side)
             {
                 case TradeSide.Long:
-                    if (contextTrade.ClosePrice >= contextTrade.OpenPrice) trade_status_textblock.Text = 
-                            Application.Current.FindResource(ResourceAccessHelper.WinFilterButtonText).ToString();
-                    else trade_status_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.LossFilterButtonText).ToString();
+                    if (contextTrade.ClosePrice >= contextTrade.OpenPrice) trade_status_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.WinFilterButtonText);
+                    else trade_status_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.LossFilterButtonText);
                     break;
                 case TradeSide.Short:
-                    if (contextTrade.ClosePrice <= contextTrade.OpenPrice) trade_status_textblock.Text =
-                            Application.Current.FindResource(ResourceAccessHelper.WinFilterButtonText).ToString(); 
-                    else trade_status_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.LossFilterButtonText).ToString(); ;
+                    if (contextTrade.ClosePrice <= contextTrade.OpenPrice) trade_status_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.WinFilterButtonText);
+                    else trade_status_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.LossFilterButtonText);
                     break;
             }
         }
@@ -78,9 +76,8 @@ public partial class TradesListViewItem : Border
     {
         var contextTrade = (Trade)DataContext;
 
-        if (contextTrade.Side == TradeSide.Long) trade_side_textblock.Text =
-                Application.Current.FindResource(ResourceAccessHelper.LongButtonText).ToString();
-        else trade_side_textblock.Text = Application.Current.FindResource(ResourceAccessHelper.ShortButtonText).ToString();
+        if (contextTrade.Side == TradeSide.Long) trade_side_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.LongButtonText);
+        else trade_side_textblock.SetResourceReference(TextBlock.TextProperty, ResourceAccessHelper.ShortButtonText);
     }
 
     private void OnTradeRiskWarningMouseEnterHandler(object sender, MouseEventArgs e)

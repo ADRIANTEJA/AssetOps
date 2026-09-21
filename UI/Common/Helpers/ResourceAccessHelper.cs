@@ -111,11 +111,11 @@ public static class ResourceAccessHelper
 
     public static string ShortButtonText => shortButtonText;
 
-    private static readonly string riskPlanWinsText = "Wins";
+    private static readonly string riskPlanWinsText = "risk_plan_wins_header";
 
     public static string RiskPlanWinsText => riskPlanWinsText;
 
-    private static readonly string riskPlanLossesText = "Losses";
+    private static readonly string riskPlanLossesText = "risk_plan_losses_header";
 
     public static string RiskPlanLossesText => riskPlanLossesText;
 
